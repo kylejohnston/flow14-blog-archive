@@ -1,24 +1,3 @@
-/*!
-Theme Name: flow14
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: flow14
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-flow14 is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-*/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -158,8 +137,8 @@ a:active,a:hover{outline:0}
 article .entry-title a { color:#e53b34; line-height:1;margin:0 8px 0 0;}
 article .entry-title a:hover { color: #b01c17; }
 article a:link,article a:visited{position:relative;text-decoration:none;z-index:1}
-article a:link:after,
-article a:visited:after {
+article a:not(:has(img)):link:after,
+article a:not(:has(img)):visited:after {
 	position:absolute;
 	display: inline;
 	background:rgba(254, 141, 29, 0.3);
@@ -172,6 +151,7 @@ article a:visited:after {
 	width:96%;
 	z-index: -1;
 }
+
 article a:active:after,article a:hover:after{background:#8fc8df}
 article .entry-title a:after { display:none;}
 h1.site-title{line-height: 1; margin:0; padding: 0;}
